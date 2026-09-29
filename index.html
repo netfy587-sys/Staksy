@@ -1,0 +1,157 @@
+<!-- STAKSY LANDING PAGE: paste into an Elementor "HTML" widget -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap');
+.sks{--bg:#fbfdf9;--soft:#eaf6ee;--ink:#0d2a24;--mut:#4b6660;--deep:#0b3d33;--lime:#c8f169;--line:#d3e5da;--card:#fff;background:var(--bg);color:var(--ink);font:400 17px/1.7 'DM Sans',system-ui,sans-serif}
+@media(prefers-color-scheme:dark){.sks{--bg:#08201b;--soft:#0e2d26;--ink:#eaf6ee;--mut:#a5c2b8;--deep:#0b3d33;--line:#1e4a3f;--card:#0e2d26}}
+.sks *,.sks *::before,.sks *::after{box-sizing:border-box}
+.sks h1,.sks h2,.sks h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.12;margin:0 0 .5em;color:var(--ink)}
+.sks h1{font-size:clamp(2.6rem,7vw,4.6rem)}.sks h2{font-size:clamp(1.9rem,4vw,2.8rem)}.sks h3{font-size:1.3rem}
+.sks p{margin:0 0 1em}.sks a{color:inherit}
+.sks .w{max-width:1100px;margin:0 auto;padding:0 20px}
+.sks .bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.sks .logo{font:400 1.7rem 'DM Serif Display',serif;text-decoration:none}.sks .logo i{font-style:normal;background:var(--lime);color:#0b3d33;border-radius:50%;display:inline-block;width:.42em;height:.42em;margin-left:3px}
+.sks nav{display:flex;gap:24px}.sks nav a{text-decoration:none;color:var(--mut);font-weight:500;font-size:.95rem}
+@media(max-width:760px){.sks nav{display:none}}
+.sks .hero{background:var(--deep);color:#fff;text-align:center;padding:30px 0 0;overflow:hidden}
+.sks .hero .bar .logo,.sks .hero nav a{color:#fff}.sks .hero nav a{opacity:.8}
+.sks .pill{display:inline-block;border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:6px 16px;font-size:.92rem;color:var(--lime);margin:44px 0 18px}
+.sks .hero h1{color:#fff;max-width:14ch;margin:0 auto .4em}
+.sks .hero p{max-width:60ch;margin:0 auto 1em;color:#cfe6dc;font-size:1.15rem}
+.sks .hero svg{display:block;width:100%;max-width:760px;height:auto;margin:30px auto 0}
+.sks section{padding:80px 0}.sks .soft{background:var(--soft)}
+.sks .head{max-width:720px;margin-bottom:34px}.sks .head p{color:var(--mut)}
+.sks .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.sks .b{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px}
+.sks .b p{margin:0;color:var(--mut)}.sks .b .e{font-size:2rem;display:block;margin-bottom:8px}
+.sks .b.s2{grid-column:span 2}.sks .b.s3{grid-column:span 3}.sks .b.s4{grid-column:span 4}
+.sks .b.dark{background:var(--deep);border-color:var(--deep)}.sks .b.dark h3{color:var(--lime)}.sks .b.dark p{color:#d5eadf}
+.sks .b.lime{background:var(--lime);border-color:var(--lime)}.sks .b.lime h3,.sks .b.lime p{color:#0b3d33}
+@media(max-width:860px){.sks .b.s2,.sks .b.s3,.sks .b.s4{grid-column:span 6}}
+.sks .quote{font:400 clamp(1.5rem,3.2vw,2.2rem)/1.3 'DM Serif Display',serif;text-align:center;max-width:820px;margin:0 auto}
+.sks .quote small{display:block;font:500 1rem 'DM Sans',sans-serif;color:var(--mut);margin-top:14px}
+.sks .tl{position:relative;margin:0;padding:0 0 0 34px;list-style:none;border-left:2px solid var(--line)}
+.sks .tl li{position:relative;padding:0 0 30px 18px}
+.sks .tl li::before{content:"";position:absolute;left:-43px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--lime);border:3px solid var(--deep)}
+.sks .tl b{font:400 1.3rem 'DM Serif Display',serif;display:block}.sks .tl p{color:var(--mut);margin:.2em 0 0}
+.sks .cols{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:start}
+@media(max-width:860px){.sks .cols{grid-template-columns:1fr}}
+.sks .art h3{margin-top:1.6em}.sks .art p{color:var(--ink)}
+.sks .side{background:var(--deep);color:#fff;border-radius:22px;padding:28px}
+.sks .side h3{color:var(--lime)}.sks .side ul{padding-left:1.1em;margin:0;color:#d5eadf}.sks .side li{margin-bottom:.7em}
+.sks .tw{overflow-x:auto}.sks table{width:100%;border-collapse:collapse;font-size:.97rem}
+.sks th,.sks td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.sks th{font:400 1.05rem 'DM Serif Display',serif}
+.sks .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:860px){.sks .trust{grid-template-columns:1fr}}
+.sks .trust div{border-top:3px solid var(--lime);padding-top:14px}.sks .trust p{color:var(--mut);margin:0}
+.sks details{border-bottom:1px solid var(--line);padding:18px 0}.sks details:first-of-type{border-top:1px solid var(--line)}
+.sks summary{cursor:pointer;font:400 1.25rem 'DM Serif Display',serif}.sks details p{margin:10px 0 0;color:var(--mut)}
+.sks .final{background:var(--deep);color:#fff;text-align:center}
+.sks .final h2{color:#fff;max-width:18ch;margin:0 auto .4em}.sks .final p{max-width:56ch;margin:0 auto 1em;color:#cfe6dc}
+.sks .final .lm{color:var(--lime);font-weight:700}
+.sks footer{background:#072a23;color:#a5c2b8;padding:26px 0;font-size:.9rem}
+.sks footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+
+<div class="sks" id="top">
+<div class="hero">
+<div class="w bar"><a class="logo" href="#top">Staksy<i></i></a>
+<nav><a href="#why">Why us</a><a href="#plan">30-day plan</a><a href="#guide">Guide</a><a href="#faq">FAQ</a></nav></div>
+<div class="w">
+<span class="pill">🌟 Online Adventures Platform</span>
+<h1>Staksy: learn anything, one small step at a time</h1>
+<p>Designed for dreamers, built for doers. Creating a Magical Atmosphere where learning new skills feels light, clear and rewarding.</p>
+<p><b>Anytime, Anywhere, Anything.</b> Click today and unlock exclusive benefits.</p>
+<svg viewBox="0 0 760 260" role="img" aria-label="Stepping stones rising toward a flag under stars">
+<g fill="#c8f169"><circle cx="90" cy="50" r="3"/><circle cx="260" cy="30" r="2"/><circle cx="470" cy="60" r="3"/><circle cx="650" cy="35" r="2"/><circle cx="720" cy="110" r="3"/></g>
+<path d="M0 260 Q190 200 380 220 T760 190 V260Z" fill="#0e5a4a"/>
+<rect x="60" y="215" width="120" height="30" rx="15" fill="#c8f169"/><rect x="210" y="185" width="110" height="28" rx="14" fill="#a6d954"/>
+<rect x="350" y="150" width="100" height="26" rx="13" fill="#c8f169"/><rect x="480" y="112" width="90" height="24" rx="12" fill="#a6d954"/>
+<rect x="590" y="72" width="80" height="22" rx="11" fill="#c8f169"/>
+<path d="M630 72V22" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M632 24l38 12-38 12z" fill="#ff8a5c"/>
+</svg>
+</div></div>
+
+<section class="soft" id="why"><div class="w">
+<div class="head"><h2>Because you deserve something truly special ✨</h2>
+<p>More than a product, it's a lifestyle. Here is how Staksy turns curiosity into skills that last.</p></div>
+<div class="bento">
+<div class="b s4 dark"><span class="e">🌱</span><h3>Small changes create big impacts</h3><p>Twenty focused minutes a day is easier to keep than one long weekend session, and it adds up fast. Tiny habits, repeated, become real ability.</p></div>
+<div class="b s2 lime"><span class="e">🍀</span><h3>New chapter of luck begins now</h3><p>Pick one skill today and take the first step.</p></div>
+<div class="b s2"><span class="e">🌍</span><h3>Anytime, Anywhere, Anything</h3><p>Learn on a phone, a laptop or a train, in any language or subject.</p></div>
+<div class="b s2"><span class="e">🏆</span><h3>Experience excellence without compromise</h3><p>Every course is reviewed for clarity, accuracy and real practice.</p></div>
+<div class="b s2"><span class="e">⚡</span><h3>Act fast: limited time, unlimited value</h3><p>Seasonal offers are short, but the skills you build stay with you.</p></div>
+<div class="b s3"><span class="e">🤝</span><h3>Join thousands already making the switch</h3><p>Learners move from scattered videos to a clear path, with a community that shares notes, questions and wins.</p></div>
+<div class="b s3"><span class="e">🎯</span><h3>Try it out today and you'll never be disappointed</h3><p>Start free, explore every course and keep only what works for you.</p></div>
+</div>
+</div></section>
+
+<section><div class="w"><p class="quote">We are a well-respected learning community, trusted by students, career-changers and lifelong hobbyists.<small>Don't wait: your future starts now.</small></p></div></section>
+
+<section class="soft" id="plan"><div class="w cols">
+<div>
+<div class="head"><h2>Your 30 days with Staksy 🗓️</h2><p>A simple plan that works for almost any skill, from coding to cooking to a new language.</p></div>
+<ol class="tl">
+<li><b>Days 1 to 3: Choose and define</b><p>Pick one skill and write one clear goal, such as "hold a five-minute conversation" or "build a small website".</p></li>
+<li><b>Week 1: Learn the basics</b><p>Study the core ideas in short sessions. Focus on understanding, not on collecting resources.</p></li>
+<li><b>Week 2: Practise actively</b><p>Close the tutorial and try things yourself. Testing what you remember teaches more than re-reading.</p></li>
+<li><b>Week 3: Build something</b><p>Make a small real project. Mistakes here are the fastest teachers.</p></li>
+<li><b>Week 4: Review and share</b><p>Revisit weak spots, show your work to others and set the next goal.</p></li>
+</ol>
+</div>
+<div class="side"><h3>📝 Quick takeaways</h3>
+<ul><li>Short daily sessions beat long irregular ones.</li><li>Test yourself instead of only re-reading.</li><li>Build small projects early.</li><li>Sleep well: rest helps memory settle.</li><li>Progress you can see keeps you going.</li></ul></div>
+</div></section>
+
+<section id="guide"><div class="w cols">
+<div class="art">
+<p style="color:var(--mut);margin-bottom:6px">📖 Staksy guide · 5 min read</p>
+<h2>How the brain actually learns new skills</h2>
+<p>Learning feels slow when we use methods that only feel productive. Research on memory points to a few habits that work better, and all of them are easy to start.</p>
+<h3>Active recall</h3>
+<p>Instead of reading a page again, close it and try to write down what you remember. The small effort of retrieving an idea strengthens it far more than passive review.</p>
+<h3>Spaced repetition</h3>
+<p>Review material at growing intervals: the next day, then a few days later, then a week. Spacing out practice helps knowledge last longer than cramming.</p>
+<h3>Deliberate practice</h3>
+<p>Work slightly beyond your comfort level, get feedback, then repeat. Ten minutes on the exact thing you find hard is worth more than an hour repeating what you already know.</p>
+<h3>Mixing it up</h3>
+<p>Alternating related topics, such as different kinds of problems, feels harder but builds the skill of choosing the right approach.</p>
+</div>
+<div class="side"><h3>🧠 Remember</h3><p style="color:#d5eadf">Struggling a little is a sign you are learning. If everything feels easy, raise the difficulty slightly.</p></div>
+</div></section>
+
+<section class="soft"><div class="w">
+<div class="head"><h2>Which study method fits your goal? 🎯</h2></div>
+<div class="tw"><table>
+<tr><th>Goal</th><th>Best method</th><th>Tip</th></tr>
+<tr><td>Memorise facts or vocabulary</td><td>Flashcards with spaced repetition</td><td>Keep cards short and review daily</td></tr>
+<tr><td>Learn a practical skill</td><td>Deliberate practice with small projects</td><td>Ask for feedback early</td></tr>
+<tr><td>Understand a hard concept</td><td>Explain it in your own words</td><td>Teach it to a friend or write it out</td></tr>
+<tr><td>Prepare for an exam</td><td>Practice tests over time</td><td>Start weeks ahead, not the night before</td></tr>
+</table></div>
+</div></section>
+
+<section><div class="w">
+<div class="head"><h2>Why learners trust Staksy 🛡️</h2></div>
+<div class="trust">
+<div><h3>Reviewed content</h3><p>Courses are checked for accuracy and clear teaching before they are published.</p></div>
+<div><h3>Honest pricing</h3><p>Prices are shown in full with no hidden fees, and you can start free.</p></div>
+<div><h3>Real support</h3><p>People answer your questions in plain language, when you need them.</p></div>
+</div></div></section>
+
+<section class="soft" id="faq"><div class="w">
+<div class="head"><h2>Frequently asked questions ❓</h2></div>
+<details><summary>Do I need any experience to start?</summary><p>No. Every course states its level, and many begin from zero.</p></details>
+<details><summary>How much time do I need each day?</summary><p>Twenty to thirty minutes is enough for steady progress. Consistency matters more than length.</p></details>
+<details><summary>Is it free to try?</summary><p>Yes. You can create an account and explore for free before choosing a paid course.</p></details>
+<details><summary>Can I learn at my own pace?</summary><p>Yes. Lessons are available anytime, so you can pause, repeat and continue whenever you like.</p></details>
+</div></section>
+
+<section class="final"><div class="w">
+<h2>Your future starts now with Staksy 🚀</h2>
+<p>Try it out today and you'll never be disappointed. Create a free account, choose your first skill and unlock exclusive member benefits.</p>
+<p class="lm">Act fast: limited time, unlimited value.</p>
+</div></section>
+
+<footer><div class="w"><span>© 2026 Staksy. Online Adventures Platform.</span><span>Designed for dreamers, built for doers.</span></div></footer>
+</div>
